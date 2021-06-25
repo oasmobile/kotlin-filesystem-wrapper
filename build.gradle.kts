@@ -24,7 +24,7 @@ tasks.test {
     useJUnit()
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
@@ -35,7 +35,7 @@ publishing {
             from(components["java"])
             pom {
                 name.set("Kotlin Filesytem Wrapper")
-                description.set("oasis mlib kotlin filesystem wrapper library")
+                description.set("oasis mlib kotlin file system wrapper library")
                 url.set("https://github.com/oasmobile/kotlin-filesystem-wrapper")
                 licenses {
                     license {
