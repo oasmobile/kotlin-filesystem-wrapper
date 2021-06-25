@@ -8,4 +8,14 @@ class TestFilesystem {
         val content = LocalFilesytem().readAll("/data")
         println("[content] $content")
     }
+
+    @Test
+    fun testReadFail() {
+        try {
+            LocalFilesytem().readAll("")
+        }
+        catch (e : Exception) {
+            println("Got exception : ${e.message}")
+        }
+    }
 }

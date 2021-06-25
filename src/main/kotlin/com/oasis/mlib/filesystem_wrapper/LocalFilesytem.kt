@@ -1,5 +1,7 @@
 package com.oasis.mlib.filesystem_wrapper
 
+import com.oasis.mlib.utils.exceptions.DataValidationException
+
 class LocalFilesytem: Filesystem {
 
     override fun has(path: String): Boolean {
@@ -8,7 +10,7 @@ class LocalFilesytem: Filesystem {
 
     override fun readAll(path: String): String {
         if (path.isEmpty())  {
-            throw Exception("path is invalid")
+            throw DataValidationException().apply { fieldName = "path" }
         }
         return "Kotlin is a powerful language"
     }
