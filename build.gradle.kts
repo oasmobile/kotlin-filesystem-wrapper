@@ -18,7 +18,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation("com.github.oasmobile:kotlin-utils:0.0.4")
+    implementation("com.github.oasmobile:kotlin-utils:2.0.0")
 }
 
 tasks.test {
