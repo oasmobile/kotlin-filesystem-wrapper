@@ -10,7 +10,7 @@ class LocalFilesytem: Filesystem {
 
     override fun readAll(path: String): String {
         if (path.isEmpty())  {
-            throw DataValidationException().apply { fieldName = "path" }
+            throw DataValidationException().apply { errorFieldName = "path" }
         }
         return "Kotlin is a powerful language"
     }
